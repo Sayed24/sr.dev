@@ -1,24 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Page Title</title>
+    <title>Simple Data Form</title>
 </head>
+
 <body>
 
-    <h1>This is a Main Heading</h1>
-    <p>This is a paragraph of visible text.</p>
+<div class="container">
+    <h2>Enter Your Details</h2>
 
-    <form action="">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit">
-</form>
+    <form id="myForm">
+        <label>Name:</label>
+        <input type="text" id="name" required>
 
+        <label>Email:</label>
+        <input type="email" id="email" required>
+
+        <label>Message:</label>
+        <textarea id="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="output">
+        <h3>Submitted Data</h3>
+        <p><strong>Name:</strong> <span id="showName"></span></p>
+        <p><strong>Email:</strong> <span id="showEmail"></span></p>
+        <p><strong>Message:</strong> <span id="showMessage"></span></p>
+    </div>
+</div>
 </body>
-    <script src="script.js"></script>
 </html>
